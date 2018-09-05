@@ -18,7 +18,9 @@ class SideBar extends Component {
 		const { classes, routes } = this.props
 		return (
 			<Fragment>
-				<img src={require('../../Assets/aduptiv.jpg')} className={classes.logo}/>
+				<div className={classes.logoContainer}>
+					<img src={require('../../Assets/aduptiv.jpg')} className={classes.logo}/>
+				</div>
 				<List>
 					{routes.map((route, index) => (
 						<Fragment key={index}>
@@ -64,10 +66,16 @@ const styles = {
 		color: '#71feca'
 	},
 	logo: {
-		height: 100,
-		padding: '5% 25% 5% 25%',
-		width: '50%',
-		backgroundColor: '#F7F7F7'
+		height: '10vh',
+		minHeight: '80px',
+		padding: '10px 0px',
+		margin: 'auto'
+	},
+	logoContainer: {
+		display: 'flex',
+		backgroundColor: 'white',
+		alignItems: 'center',
+		width: '100%'
 	}
 }
 
