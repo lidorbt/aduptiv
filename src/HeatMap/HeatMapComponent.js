@@ -60,9 +60,6 @@ class HeatMapComponent extends Component {
 								id: 'gender-simple',
 								}}
 							>
-								<MenuItem value="">
-								<em>None</em>
-								</MenuItem>
 								<MenuItem value={'male'}>Male</MenuItem>
 								<MenuItem value={'female'}>Female</MenuItem>
 							</Select>						
