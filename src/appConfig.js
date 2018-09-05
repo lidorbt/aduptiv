@@ -3,22 +3,22 @@ import { createMuiTheme } from '@material-ui/core/styles'
 export const theme = createMuiTheme({
 	palette: {
 		primary: {
-			light: 'red',
-			main: 'red',
-			dark: 'red',
-			contrastText: 'red',
+			light: '#fff',
+			main: '#fff',
+			dark: '#fff',
+			contrastText: '#fff',
 		},
 		secondary: {
-			light: 'red',
-			main: 'red',
-			dark: 'red',
-			contrastText: 'red',
+			light: '#fff',
+			main: '#fff',
+			dark: '#fff',
+			contrastText: '#fff',
 		},
 		error: {
-			light: 'red',
-			main: 'red',
-			dark: 'red',
-			contrastText: 'red',
+			light: '#fff',
+			main: '#fff',
+			dark: '#fff',
+			contrastText: '#fff',
 		},
 		typography: {
 			// Use the system font instead of the default Roboto font.
