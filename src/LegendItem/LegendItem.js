@@ -48,6 +48,7 @@ const badgeStyle = {
     width: '25px',
     top: '-9px',
     borderRadius: '25%',
+    marginRight: '10px'
 };
 
 const componentStyle = {    

@@ -5,6 +5,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import LegendItem from '../LegendItem/LegendItem.js'
+import {Map, TileLayer} from 'react-leaflet'
 
 
 class HeatMapComponent extends Component {
@@ -18,6 +19,7 @@ class HeatMapComponent extends Component {
 
 	render() {
 		return (
+			<div>
 			<Card style={styles.HeatMapCard}>		
 				<div style={styles.cardHeaderContainer}>
 					<section style={styles.headerTextContainer}>
@@ -46,8 +48,8 @@ class HeatMapComponent extends Component {
 								color={"red"}/>			
 						</section>
 					</section>
+
 					{/* A Select control will be developed in the future, is used as is for POC*/}
-					<div style={{float: 'left'}}>
 						<FormControl style={styles.FormControlStyle}>
 							<InputLabel htmlFor="gender-simple">Gender</InputLabel>
 							<Select
@@ -64,13 +66,19 @@ class HeatMapComponent extends Component {
 								<MenuItem value={'male'}>Male</MenuItem>
 								<MenuItem value={'female'}>Female</MenuItem>
 							</Select>						
-						</FormControl>
-					</div>
+						</FormControl>										
+				</div>	
 
-					{/*<Map></Map>*/}
-					
-				</div>				
+				<Map center={[32.0853,34.7818]} zoom={9} style={styles.MapContainerStyle}>			
+					<TileLayer
+					attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+					/>
+				</Map>					
 			</Card>
+
+
+</div>
 		);
 	}
 }
@@ -104,8 +112,13 @@ const styles = {
 		marginRight: '70%'
 	},
 	FormControlStyle: {
-		minWidth: 120,
+		minWidth: 160,
 		align: 'left'
+	},
+	MapContainerStyle: {
+		margin: '2vh 2vh',
+		minHeight: '300px',
+		height: '70vh'
 	}
 };
 
